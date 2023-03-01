@@ -1,8 +1,9 @@
 import { Routes, Route } from "react-router-dom"
-import Container from "react-bootstrap"
+import { Container } from "react-bootstrap"
 import { useState, useEffect } from "react";
 import axios from "axios"
 import Coins from "./components/Coins"
+import Logo from "./components/Logo"
 
 function App() {
   const [coins, setCoins] = useState([])
@@ -19,9 +20,10 @@ function App() {
   }, [])
   
   return (
-    <>
-      <Coins coins={coins}/>
-    </>
+    <Container>
+      <Logo/>
+      <Coins coins={coins} />
+    </Container>
   );
 }
 

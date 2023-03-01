@@ -1,0 +1,16 @@
+.navbarr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.navbarr h1{
+    color: white;
+}
+
+.icon {
+    font-size: 3rem;
+    color: #ff0000;
+}
