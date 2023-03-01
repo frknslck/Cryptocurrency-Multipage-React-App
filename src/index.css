@@ -7,4 +7,77 @@
 body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #24262e;
+
+}.row-s{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 0px 12px #18191b;
+    border-radius: 15px;
+    margin: 2rem 1rem;
+    padding: .7rem 1rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.row-s p {
+    padding-top: 0.8rem;
+    text-align: center;
+    color: white;
+}
+
+.map-s{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 0px 12px #18191b;
+    border-radius: 15px;
+    margin: 2rem 1rem;
+    padding: .7rem 1rem;
+    font-weight: 700;
+}
+
+.map-s p {
+    padding-top: 0.8rem;
+    text-align: center;
+    color: white;
+}
+
+.map-s:hover{
+    cursor: pointer;
+    transition: all 0.2s ease;
+    transform: scale(1.03);
+}
+
+.search{
+    background-color: transparent;
+    margin: 2rem auto;
+}
+
+.search::placeholder{
+    color: #b7bdc5;
+}
+
+.search:focus{
+    background-color: transparent;
+    color: white;
+    border-color: #FF0000;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.6);
+}
+
+.navbarr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.navbarr h1{
+    color: white;
+}
+
+.icon {
+    font-size: 3rem;
+    color: #ff0000;
 }

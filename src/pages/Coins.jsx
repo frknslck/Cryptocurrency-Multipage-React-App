@@ -1,6 +1,5 @@
 import React from 'react'
-// import "./Coins.css"
-import CoinsMap from './CoinsMap'
+import CoinsMap from '../components/CoinsMap'
 import Form from "react-bootstrap/Form"
 import { useState } from 'react'
 

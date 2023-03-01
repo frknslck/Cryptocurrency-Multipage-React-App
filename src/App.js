@@ -2,7 +2,8 @@ import { Routes, Route } from "react-router-dom"
 import { Container } from "react-bootstrap"
 import { useState, useEffect } from "react";
 import axios from "axios"
-import Coins from "./components/Coins"
+import Coins from "./pages/Coins"
+import CoinsDetail from "./pages/CoinsDetail"
 import Logo from "./components/Logo"
 
 function App() {
@@ -22,7 +23,10 @@ function App() {
   return (
     <Container>
       <Logo/>
-      <Coins coins={coins} />
+      <Routes>
+        <Route path="/" element={<Coins  coins={coins} />}/>
+        <Route path="/:coins.id" element={<CoinsDetail/>} />
+      </Routes>
     </Container>
   );
 }

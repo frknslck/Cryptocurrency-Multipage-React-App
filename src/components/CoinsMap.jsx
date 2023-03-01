@@ -1,9 +1,14 @@
 import React from 'react'
 // import "./Coins.css"
+import { useNavigate } from 'react-router-dom'
 
 const CoinsMap = ({coins}) => {
+  const navigate = useNavigate()
   return (
-    <div className='map-s'>
+    <div 
+    className='map-s'
+    type="button"
+    onClick={() => navigate(`${coins.id}`, {state: coins})}>
         <p> {coins.market_cap_rank} </p>
         <div className='d-flex gap-3'>
             <img src={coins.image} alt={coins.symbol} width="50px"/>
