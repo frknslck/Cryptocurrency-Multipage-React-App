@@ -33,6 +33,24 @@
     color: white;
 }
 
+.map-s:hover{
+    cursor: pointer;
+    transition: all 0.2s ease;
+    transform: scale(1.03);
+}
+
 .search{
+    background-color: transparent;
     margin: 2rem auto;
+}
+
+.search::placeholder{
+    color: #b7bdc5;
+}
+
+.search:focus{
+    background-color: transparent;
+    color: white;
+    border-color: #FF0000;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.6);
 }

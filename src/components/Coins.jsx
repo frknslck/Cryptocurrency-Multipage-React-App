@@ -1,5 +1,5 @@
 import React from 'react'
-import "./Coins.css"
+// import "./Coins.css"
 import CoinsMap from './CoinsMap'
 import Form from "react-bootstrap/Form"
 import { useState } from 'react'
@@ -9,7 +9,7 @@ const Coins = (coins) => {
   return (
     <>
         <Form.Control 
-            placeholder="Search coin by name" 
+            placeholder="Search coin by name..." 
             type="search" 
             className='search w-50'
             onChange={(e) => setSearch(e.target.value)}/>
@@ -22,7 +22,9 @@ const Coins = (coins) => {
                     <p>Volume</p>
                     <p>Mkt Cap</p>
                 </div>
-                {coins.coins.filter((coins) => coins.id.toLowerCase().includes(search.trim().toLowerCase())).map(coins => {
+                {coins.coins.filter((coins) => {
+                    return coins.id.toLowerCase().includes(search.trim().toLowerCase())}
+                    ).map(coins => {
                     return(
                         <CoinsMap coins={coins} key={coins.id}/>
                     )
