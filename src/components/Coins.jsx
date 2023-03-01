@@ -22,7 +22,7 @@ const Coins = (coins) => {
                     <p>Volume</p>
                     <p>Mkt Cap</p>
                 </div>
-                {coins.coins.filter((coins) => coins.symbol.toLowerCase().includes(search.trim().toLowerCase())).map(coins => {
+                {coins.coins.filter((coins) => coins.id.toLowerCase().includes(search.trim().toLowerCase())).map(coins => {
                     return(
                         <CoinsMap coins={coins} key={coins.id}/>
                     )

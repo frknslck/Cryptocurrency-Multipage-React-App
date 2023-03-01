@@ -2,7 +2,6 @@ import React from 'react'
 import "./Coins.css"
 
 const CoinsMap = ({coins}) => {
-    console.log(coins);
   return (
     <div className='map-s'>
         <p> {coins.market_cap_rank} </p>
