@@ -9,7 +9,7 @@ import Logo from "./components/Logo"
 function App() {
   const [coins, setCoins] = useState([])
 
-  const url = "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=25&page=1&sparkline=false"
+  const url = "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=2&page=1&sparkline=false"
 
   useEffect(() => {
     axios.get(url).then((response) => {
@@ -24,8 +24,8 @@ function App() {
     <Container>
       <Logo/>
       <Routes>
-        <Route path="/" element={<Coins  coins={coins} />}/>
-        <Route path="/:coins.id" element={<CoinsDetail/>} />
+        <Route path="/" element={<Coins coins={coins} />}/>
+        <Route path=":coinId" element={<CoinsDetail/>} />
       </Routes>
     </Container>
   );
